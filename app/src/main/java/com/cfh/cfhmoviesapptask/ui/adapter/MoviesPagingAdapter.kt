@@ -54,7 +54,7 @@ class MoviesPagingAdapter(
 
 class MovieDiffCallBack : DiffUtil.ItemCallback<Movies>() {
     override fun areItemsTheSame(oldItem: Movies, newItem: Movies): Boolean {
-        return oldItem.id == newItem.id && oldItem.title == newItem.title
+        return oldItem.id == newItem.id
     }
 
     override fun areContentsTheSame(oldItem: Movies, newItem: Movies): Boolean {

@@ -33,7 +33,7 @@ class MoviesRemoteMediator(
                 LoadType.APPEND -> {
                     val lastItem = state.lastItemOrNull()
                     if (lastItem == null) {
-                        1
+                        return MediatorResult.Success(endOfPaginationReached = true)
                     } else {
                         val lastFetchedPage = moviesDB.dao.getLastFetchedPage() ?: 1
                         lastFetchedPage + 1
